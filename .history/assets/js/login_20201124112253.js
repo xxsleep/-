@@ -70,14 +70,7 @@ $(function () {
             data,
             success: function (res) {
                 console.log(res);
-                if (res.status !== 0) {
-                    return layer.msg('注册失败，' + res.message)
-                }
-
-                layer.msg('注册成功')
-                $("#gotoLg").click();
             }
-
         })
     })
 })

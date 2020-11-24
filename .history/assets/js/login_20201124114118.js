@@ -34,7 +34,7 @@ $(function () {
         }
     });
 
-    $('#lgBox').on('submit', function (e) {
+    $('#lgbox').on('submit', function (e) {
         e.preventDefault()
         let data = $(this).serialize()
         $.ajax({
@@ -75,7 +75,6 @@ $(function () {
                 }
 
                 layer.msg('注册成功')
-                $("#gotoLg").click();
             }
 
         })
