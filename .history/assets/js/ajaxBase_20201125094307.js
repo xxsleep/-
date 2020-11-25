@@ -12,10 +12,6 @@ $.ajaxPrefilter(function (options) {
 
     options.complete = function (xhr) {
         console.log(xhr);
-        if (xhr.responseJSON.status !== 0 && xhr.responseJSON.message !== '获取用户基本信息成功') {
-            localStorage.removeItem('token')
-            location.href = '/home/login.html'
-        }
     }
 
 
