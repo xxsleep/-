@@ -25,11 +25,14 @@ $(function () {
     $('#smBtn').submit(function () {
         let data = form.val("form")
         data.id = id
-        console.log(data);
         $.ajax({
             type: 'POST',
             url: '/my/userinfo',
-            data: data,
+            data: {
+                id: id,
+                nickname: data.nickname,
+                email: data.email
+            },
             success: function (res) {
                 if (res.status !== 0) {
                     return lay.msg("修改用户信息失败！")
