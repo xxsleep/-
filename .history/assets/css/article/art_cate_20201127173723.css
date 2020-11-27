@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+}
+
+#upBtn {
+    float: right;
+    text-align: center;
+}
