@@ -1,21 +1,3 @@
-$(function () {
-
-    let layer = layui.layer
-    getIndex()
-    $('.clsBtn').click(function (e) {
-        e.preventDefault()
-        layer.confirm('确定退出登录？', {
-            icon: 3,
-            title: '提 示'
-        }, function (index) {
-            //do something
-            localStorage.removeItem('token')
-            location.href = '/home/login.html'
-            layer.close(index);
-        });
-    })
-})
-
 function getIndex() {
     $.ajax({
         url: '/my/userinfo',
@@ -35,3 +17,20 @@ function getIndex() {
         }
     })
 }
+$(function () {
+
+    let layer = layui.layer
+    getIndex()
+    $('.clsBtn').click(function (e) {
+        e.preventDefault()
+        layer.confirm('确定退出登录？', {
+            icon: 3,
+            title: '提 示'
+        }, function (index) {
+            //do something
+            localStorage.removeItem('token')
+            location.href = '/home/login.html'
+            layer.close(index);
+        });
+    })
+})

@@ -1,5 +1,6 @@
 $(function () {
     let form = layui.form
+    var id
 
     function getUser() {
         $.ajax({
@@ -8,6 +9,7 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg("获取用户基本信息失败！");
                 }
+                id = res.data.id
                 form.val('form', res.data)
             }
         })
@@ -20,9 +22,9 @@ $(function () {
     })
 
 
-    $('#smBtn').submit(function (e) {
-        e.preventDefault()
+    $('#smBtn').submit(function () {
         let data = form.val("form")
+        data.id = id
         console.log(data);
         $.ajax({
             type: 'POST',
