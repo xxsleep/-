@@ -14,7 +14,7 @@ $(function () {
     }
     let index
     $('#upBtn').click(function () {
-        // console.log($("#addForm").html());
+        console.log($("#addForm").html());
         index = layer.open({
             type: 1,
             title: '添加文章分类',
@@ -45,7 +45,6 @@ $(function () {
 
     let editIndex
     $('tbody').on('click', '#editBtn', (function () {
-        console.log($("#editForm").html());
         let id = $(this).attr('data_id')
         editIndex = layer.open({
             type: 1,

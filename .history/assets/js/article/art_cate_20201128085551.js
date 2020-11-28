@@ -59,7 +59,7 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg("获取文章分类数据失败！" + res.message);
                 }
-                form.val("editForm", res.data);
+                // form.val("editForm", res.data);
             }
         })
     }))

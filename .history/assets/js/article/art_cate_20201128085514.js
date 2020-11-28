@@ -53,15 +53,15 @@ $(function () {
             area: '500px',
             content: $("#editForm").html(),
         });
-        $.ajax({
-            url: '/my/article/cates/' + id,
-            success: function (res) {
-                if (res.status !== 0) {
-                    return layer.msg("获取文章分类数据失败！" + res.message);
-                }
-                form.val("editForm", res.data);
-            }
-        })
+        // $.ajax({
+        //     url: '/my/article/cates/' + id,
+        //     success: function (res) {
+        //         if (res.status !== 0) {
+        //             return layer.msg("获取文章分类数据失败！" + res.message);
+        //         }
+        //         form.val("editForm", res.data);
+        //     }
+        // })
     }))
 
 

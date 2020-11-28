@@ -45,7 +45,6 @@ $(function () {
 
     let editIndex
     $('tbody').on('click', '#editBtn', (function () {
-        console.log($("#editForm").html());
         let id = $(this).attr('data_id')
         editIndex = layer.open({
             type: 1,
